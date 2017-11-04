@@ -29,8 +29,7 @@ void main()
 	LCD12864_init();
 	while(1)
 	{
-		System_init();
-		
+		System();		
 	}	
 }
 

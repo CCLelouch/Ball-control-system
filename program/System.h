@@ -15,8 +15,11 @@ typedef enum
 
 extern State System_State;
 
-void System_init();
-
+void System();
+void Set_Distance();
+void Action1();
+void Action2();
+void Action3();
 
 
 

@@ -100,7 +100,7 @@ uchar KEY4_scan()
 		Delay(90);
 		if(s1==0)
 		{
-			Buzzer(0);
+//			Buzzer(0);
 			return 1;
 		}			
 	}
@@ -130,7 +130,7 @@ uchar KEY4_scan()
 		Delay(90);
 		if(s4==0)
 		{
-			Buzzer(0);
+//			Buzzer(0);
 			return 4;
 		}	
 	}
