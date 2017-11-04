@@ -1,0 +1,149 @@
+C51 COMPILER V9.00   LCD12864                                                              11/04/2017 11:00:51 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE LCD12864
+OBJECT MODULE PLACED IN ..\output\lcd12864.obj
+COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\lcd12864.c BROWSE INCDIR(..\program) DEBUG 
+                    -OBJECTEXTEND PRINT(..\listing\lcd12864.lst) TABS(2) OBJECT(..\output\lcd12864.obj)
+
+line level    source
+
+   1          #include"lcd12864.h"
+   2          #include"Delay.H"
+   3          
+   4          sbit CS = P2^5;
+   5          sbit SID = P2^6;
+   6          sbit SCLK = P2^7;
+   7          sbit PSB = P3^3;
+   8          sbit RST = P3^7;
+   9          
+  10          /****************************************************************
+  11          **函数：Send_byte(uint8 byte)     
+  12          **功能：
+  13          **说明： 
+  14          **修改日期：2017-11-03
+  15          **作者：c.c. 
+  16          ****************************************************************/
+  17          void Send_byte(uint8 byte)
+  18          {
+  19   1         uint8 i;
+  20   1         for(i = 0;i<8;i++)
+  21   1         {
+  22   2            if( (byte<<i) &0x80)
+  23   2              SID =  1;
+  24   2            else
+  25   2              SID = 0;
+  26   2            SCLK = 1;
+  27   2            SCLK = 0;
+  28   2         }
+  29   1      }
+  30          
+  31          /****************************************************************
+  32          **函数：void Write_comordata(uchar mode,uint8 cmdcode)      
+  33          **功能：
+  34          **说明：mode模式选择，0为指令，1为数据 
+  35          **修改日期：2017-11-03
+  36          **作者：c.c. 
+  37          ****************************************************************/
+  38          void Write_comordata(uchar mode,uint8 dat)
+  39          {
+  40   1        CS = 1;
+  41   1        if(!mode)
+  42   1          Send_byte(0xf8);                 //指令传送
+  43   1        else
+  44   1          Send_byte(0xfa);                 //数据传送
+  45   1        Send_byte(dat &0xf0);          //先传高四位
+  46   1        Send_byte((dat<<4) &0xf0);     //再传第四位
+  47   1        CS = 0;   
+  48   1      }
+  49          
+  50          /****************************************************************
+  51          **函数：void Write_word(uint8 *P)     
+  52          **功能：
+  53          **说明： 
+  54          **修改日期：2017-11-03
+C51 COMPILER V9.00   LCD12864                                                              11/04/2017 11:00:51 PAGE 2   
+
+  55          **作者：c.c. 
+  56          ****************************************************************/
+  57          void Write_word(uint8 *P)
+  58          {
+  59   1        while(*P!='\0')
+  60   1        {
+  61   2          Write_comordata(1,*P);
+  62   2          P++;
+  63   2        }
+  64   1      }
+  65          
+  66          /****************************************************************
+  67          **函数：void LCD12864_init()      
+  68          **功能：
+  69          **说明： 
+  70          **修改日期：2017-11-03
+  71          **作者：c.c. 
+  72          ****************************************************************/
+  73          void LCD12864_init()
+  74          {
+  75   1        Delay(50);
+  76   1        RST = 0;
+  77   1        RST = 1;
+  78   1        Write_comordata(0,0x30);    //基本操作指令设定
+  79   1        Delay(50);
+  80   1        Write_comordata(0,0x0c);    //无游标
+  81   1        Delay(50);
+  82   1        Write_comordata(0,0x01);    //清屏
+  83   1      }
+  84          
+  85          /****************************************************************
+  86          **函数：void LCD12864_Display(uchar line,uchar *string)     
+  87          **功能：二字节字符显示
+  88          **说明：输入显示的字符串
+  89          **修改日期：2017-11-03
+  90          **作者：c.c. 
+  91          ****************************************************************/
+  92          void LCD12864_Display(uchar line,uchar *string)
+  93          {
+  94   1        if(line==1)
+  95   1          Write_comordata(0,0x80);   //line1
+  96   1        else if(line==2)
+  97   1          Write_comordata(0,0x90);   //line2        //0x90-8=0x88
+  98   1        else if(line==3)
+  99   1          Write_comordata(0,0x88);   //line3
+ 100   1        else if(line==4)
+ 101   1          Write_comordata(0,0x98);   //line4
+ 102   1        Write_word(string);
+ 103   1      }
+ 104          
+ 105          
+ 106          
+ 107          /**
+ 108            * 第一字节：串口控制格式 11111ABC
+ 109            *           A为数据传送方向控制：H表示数据从LCD到MCU，L表示从MCU到LCD
+ 110            *           B为数据类型选择：H表示数据是显示数据，L表示数据是控制指令
+ 111            *           C固定为0
+ 112            * 第二字节：（并行）8位数据的高4位
+ 113            * 第三字节：（并行）8位数据的低4位
+ 114            */
+ 115          
+ 116          
+C51 COMPILER V9.00   LCD12864                                                              11/04/2017 11:00:51 PAGE 3   
+
+ 117          /******************************************COM************************************
+ 118                      **B7      B6      B5      B4      |B3     B2      B1      B0      ****
+ 119            @显示状态 **L       L       L       L       |L      DSP     Cursor  Blink   ****
+ 120            @反白选择 **L       L       L       L       |L      H       R1      R0      ****
+ 121            ********************************************************************************/
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    163    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

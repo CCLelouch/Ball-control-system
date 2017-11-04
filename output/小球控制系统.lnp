@@ -1,0 +1,8 @@
+"..\output\loop.obj",
+"..\output\Delay.obj",
+"..\output\lcd12864.obj",
+"..\output\System.obj",
+"..\output\Key.obj",
+"..\output\buzzer.obj" 
+TO "..\output\小球控制系统" 
+PRINT("..\listing\小球控制系统.m51") RAMSIZE(256) 

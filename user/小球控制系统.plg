@@ -1,0 +1,497 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+G:\单片机\15w89c单片机\15W程序\电子设计大赛\小球控制系统\user\小球控制系统.uvproj
+Project File Date:  11/02/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+..\PROGRAM\DELAY.H(5): error C141: syntax error near 'xms', expected ')'
+..\PROGRAM\DELAY.H(6): error C141: syntax error near 'xus', expected ')'
+..\PROGRAM\DELAY.C(9): error C141: syntax error near 'x', expected ')'
+..\PROGRAM\DELAY.C(11): error C141: syntax error near 'i'
+..\PROGRAM\DELAY.C(11): error C202: 'i': undefined identifier
+..\PROGRAM\DELAY.C(12): error C202: 'x': undefined identifier
+..\PROGRAM\DELAY.C(14): error C202: 'j': undefined identifier
+..\PROGRAM\DELAY.C(15): error C202: 'i': undefined identifier
+..\PROGRAM\DELAY.C(25): error C141: syntax error near 'x', expected ')'
+..\PROGRAM\DELAY.C(27): error C202: 'x': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+..\PROGRAM\DELAY.H(5): error C141: syntax error near 'xms', expected ')'
+..\PROGRAM\DELAY.H(6): error C141: syntax error near 'xus', expected ')'
+..\PROGRAM\DELAY.C(9): error C141: syntax error near 'x', expected ')'
+..\PROGRAM\DELAY.C(11): error C141: syntax error near 'i'
+..\PROGRAM\DELAY.C(11): error C202: 'i': undefined identifier
+..\PROGRAM\DELAY.C(12): error C202: 'x': undefined identifier
+..\PROGRAM\DELAY.C(14): error C202: 'j': undefined identifier
+..\PROGRAM\DELAY.C(15): error C202: 'i': undefined identifier
+..\PROGRAM\DELAY.C(25): error C141: syntax error near 'x', expected ')'
+..\PROGRAM\DELAY.C(27): error C202: 'x': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+..\PROGRAM\DELAY.H(5): error C141: syntax error near 'xms', expected ')'
+..\PROGRAM\DELAY.H(6): error C141: syntax error near 'xus', expected ')'
+..\PROGRAM\DELAY.C(9): error C141: syntax error near 'x', expected ')'
+..\PROGRAM\DELAY.C(11): error C141: syntax error near 'i'
+..\PROGRAM\DELAY.C(11): error C202: 'i': undefined identifier
+..\PROGRAM\DELAY.C(12): error C202: 'x': undefined identifier
+..\PROGRAM\DELAY.C(14): error C202: 'j': undefined identifier
+..\PROGRAM\DELAY.C(15): error C202: 'i': undefined identifier
+..\PROGRAM\DELAY.C(25): error C141: syntax error near 'x', expected ')'
+..\PROGRAM\DELAY.C(27): error C202: 'x': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  .\loop.obj (LOOP)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  .\loop.obj (LOOP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  .\loop.obj (LOOP)
+    ADDRESS: 005EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  .\loop.obj (LOOP)
+    ADDRESS: 0061H
+Program Size: data=9.0 xdata=0 code=114
+"小球控制系统" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+    ADDRESS: 005EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+    ADDRESS: 0061H
+Program Size: data=9.0 xdata=0 code=114
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+..\PROGRAM\LOOP.C(27): warning C206: 'int_timer2_init': missing function-prototype
+..\PROGRAM\LOOP.C(28): warning C206: 'timer2_init': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+    ADDRESS: 005EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+    ADDRESS: 0061H
+Program Size: data=9.0 xdata=0 code=114
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+..\PROGRAM\LOOP.C(27): warning C206: 'int_timer2_init': missing function-prototype
+..\PROGRAM\LOOP.C(28): warning C206: 'timer2_init': missing function-prototype
+compiling Delay.C...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INT_TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+    ADDRESS: 005EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  TIMER2_INIT
+    MODULE:  ..\output\loop.obj (LOOP)
+    ADDRESS: 0061H
+Program Size: data=9.0 xdata=0 code=114
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=108
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\PROGRAM\LCD12864.C(10): error C202: 'SID': undefined identifier
+..\PROGRAM\LCD12864.C(12): error C202: 'SID': undefined identifier
+..\PROGRAM\LCD12864.C(13): error C202: 'SCLK': undefined identifier
+..\PROGRAM\LCD12864.C(14): error C202: 'SCLK': undefined identifier
+..\PROGRAM\LCD12864.C(20): error C202: 'CS': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C202: 'CS': undefined identifier
+..\PROGRAM\LCD12864.C(29): error C202: 'CS': undefined identifier
+..\PROGRAM\LCD12864.C(33): error C202: 'CS': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\PROGRAM\LCD12864.C(53): warning C206: 'Delay': missing function-prototype
+..\PROGRAM\LCD12864.C(53): error C267: 'Delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\PROGRAM\LCD12864.C(53): warning C206: 'Delay': missing function-prototype
+..\PROGRAM\LCD12864.C(53): error C267: 'Delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\PROGRAM\LCD12864.C(53): warning C206: 'Delay': missing function-prototype
+..\PROGRAM\LCD12864.C(53): error C267: 'Delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_WRITE_HZ?LCD12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD12864_INIT?LCD12864
+Program Size: data=9.0 xdata=0 code=261
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_WRITE_HZ?LCD12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD12864_INIT?LCD12864
+Program Size: data=9.0 xdata=0 code=261
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+..\PROGRAM\LOOP.C(28): warning C206: 'LCD12864_init': missing function-prototype
+..\PROGRAM\LOOP.C(31): warning C206: 'Write_com': missing function-prototype
+..\PROGRAM\LOOP.C(31): error C267: 'Write_com': requires ANSI-style prototype
+..\PROGRAM\LOOP.C(33): error C202: 'a': undefined identifier
+compiling Delay.C...
+compiling lcd12864.c...
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+..\PROGRAM\LOOP.C(28): warning C206: 'LCD12864_init': missing function-prototype
+..\PROGRAM\LOOP.C(31): warning C206: 'Write_com': missing function-prototype
+..\PROGRAM\LOOP.C(31): error C267: 'Write_com': requires ANSI-style prototype
+compiling Delay.C...
+compiling lcd12864.c...
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=290
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\program\lcd12864.c(8): warning C317: attempt to redefine macro 'P2'
+..\program\lcd12864.c(10): warning C317: attempt to redefine macro 'P2'
+..\PROGRAM\LCD12864.C(22): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(22): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(23): error C141: syntax error near 'else'
+..\PROGRAM\LCD12864.C(24): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(25): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(25): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(26): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(26): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(32): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(32): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(36): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(36): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(41): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(41): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(45): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(45): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(60): error C202: 'RST': undefined identifier
+..\PROGRAM\LCD12864.C(61): error C202: 'RST': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\program\lcd12864.c(8): warning C317: attempt to redefine macro 'P2'
+..\program\lcd12864.c(10): warning C317: attempt to redefine macro 'P2'
+..\PROGRAM\LCD12864.C(22): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(22): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(23): error C141: syntax error near 'else'
+..\PROGRAM\LCD12864.C(24): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(25): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(25): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(26): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(26): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(32): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(32): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(36): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(36): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(41): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(41): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(45): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(45): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(60): error C202: 'RST': undefined identifier
+..\PROGRAM\LCD12864.C(61): error C202: 'RST': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+..\program\lcd12864.c(8): warning C317: attempt to redefine macro 'P2'
+..\program\lcd12864.c(10): warning C317: attempt to redefine macro 'P2'
+..\PROGRAM\LCD12864.C(22): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(22): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(23): error C141: syntax error near 'else'
+..\PROGRAM\LCD12864.C(24): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(25): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(25): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(26): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(26): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(32): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(32): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(36): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(36): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(41): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(41): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(45): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(45): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(60): error C202: 'RST': undefined identifier
+..\PROGRAM\LCD12864.C(61): error C202: 'RST': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd12864.c...
+..\program\lcd12864.c(8): warning C317: attempt to redefine macro 'P2'
+..\program\lcd12864.c(10): warning C317: attempt to redefine macro 'P2'
+..\PROGRAM\LCD12864.C(22): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(22): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(23): error C141: syntax error near 'else'
+..\PROGRAM\LCD12864.C(24): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(25): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(25): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(26): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(26): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(32): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(32): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(36): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(36): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(41): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(41): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(45): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(45): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(60): error C202: 'RST': undefined identifier
+..\PROGRAM\LCD12864.C(61): error C202: 'RST': undefined identifier
+Target not created
+compiling lcd12864.c...
+..\program\lcd12864.c(8): warning C317: attempt to redefine macro 'P2'
+..\program\lcd12864.c(10): warning C317: attempt to redefine macro 'P2'
+..\PROGRAM\LCD12864.C(22): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(22): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(23): error C141: syntax error near 'else'
+..\PROGRAM\LCD12864.C(24): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(25): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(25): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(26): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(26): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(32): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(32): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(36): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(36): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(41): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(41): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(45): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(45): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(60): error C202: 'RST': undefined identifier
+..\PROGRAM\LCD12864.C(61): error C202: 'RST': undefined identifier
+..\program\lcd12864.c - 19 Error(s), 2 Warning(s).
+compiling loop.c...
+..\program\loop.c - 0 Error(s), 0 Warning(s).
+compiling Delay.C...
+..\program\Delay.C - 0 Error(s), 0 Warning(s).
+compiling lcd12864.c...
+..\program\lcd12864.c(8): warning C317: attempt to redefine macro 'P2'
+..\program\lcd12864.c(10): warning C317: attempt to redefine macro 'P2'
+..\PROGRAM\LCD12864.C(22): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(22): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(23): error C141: syntax error near 'else'
+..\PROGRAM\LCD12864.C(24): error C202: 'RW': undefined identifier
+..\PROGRAM\LCD12864.C(24): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(25): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(25): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(26): error C202: 'E': undefined identifier
+..\PROGRAM\LCD12864.C(26): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(32): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(32): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(36): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(36): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(41): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(41): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(45): error C202: 'RS': undefined identifier
+..\PROGRAM\LCD12864.C(45): error C141: syntax error near '='
+..\PROGRAM\LCD12864.C(60): error C202: 'RST': undefined identifier
+..\PROGRAM\LCD12864.C(61): error C202: 'RST': undefined identifier
+..\program\lcd12864.c - 19 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=290
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=290
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=290
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=340
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=333
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=333
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=333
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=333
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling loop.c...
+compiling Delay.C...
+compiling lcd12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?DELAY
+Program Size: data=9.0 xdata=0 code=303
+creating hex file from "..\output\小球控制系统"...
+"..\output\小球控制系统" - 0 Error(s), 1 Warning(s).
+compiling loop.c...
+..\program\loop.c - 0 Error(s), 0 Warning(s).
