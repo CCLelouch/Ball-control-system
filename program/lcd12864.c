@@ -95,7 +95,7 @@ void LCD12864_Display(uchar line,uchar *string)
 		Write_comordata(0,0x80);	 //line1
 	else if(line==2)
 		Write_comordata(0,0x90);	 //line2				//0x90-8=0x88
-	else if(line==3)
+	else if(line==3)					
 		Write_comordata(0,0x88);	 //line3
 	else if(line==4)
 		Write_comordata(0,0x98);	 //line4

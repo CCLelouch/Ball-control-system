@@ -1,0 +1,92 @@
+C51 COMPILER V9.00   INTERRUPT                                                             11/21/2017 19:14:30 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE INTERRUPT
+OBJECT MODULE PLACED IN ..\output\interrupt.obj
+COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\interrupt.c BROWSE INCDIR(..\program) DEBUG
+                    - OBJECTEXTEND PRINT(..\listing\interrupt.lst) TABS(2) OBJECT(..\output\interrupt.obj)
+
+line level    source
+
+   1          #include"interrupt.h"
+   2          #include"pid.h"
+   3          #include "PWM.H"
+   4          #include"system.h"
+   5          
+   6          unsigned int buf=0,distance=0; 
+   7          
+   8          /********************************************************************************
+   9          ** 函数名：
+  10          ** 功能：
+  11          ** 说明：每0.5 uS进入中
+  12          ** 修改日期：2017-00-00
+  13          ** 作者：c.c. 
+  14          *********************************************************************************/
+  15          void int_external0_init()
+  16          {
+  17   1      //  AUXR = 0x00;         //设置定时器0速度是传统8051单片机速度       默认
+  18   1        AUXR = 0x80;         //设置定时器0速度是传统8051单片机速度的12倍即1T   需要用户另外设置
+  19   1      
+  20   1      //  IE0 = 0;
+  21   1        IE1 = 0;          //清除外部中断0/1中断标志位
+  22   1      //  EX0 = 1;
+  23   1        EX1 = 1;          //允许外部中断0/1产生中断
+  24   1      
+  25   1      //  IT0 = 0;          //设置外部中断0为下降沿与上升沿均可触发
+  26   1      //  IT0 = 1;          //设置外部中断0为下降沿触发
+  27   1      
+  28   1        IT1 = 0;          //设置外部中断1为下降沿与上升沿均可触发
+  29   1      //  IT1 = 1;          //设置外部中断1为下降沿触发
+  30   1      
+  31   1        EA   = 1;          //启动单片机总中断
+  32   1        PX1 = 1;
+  33   1      }
+  34          
+  35          void INT1_Int (void) interrupt 2     //INT0/P3.3/**/4
+  36          { 
+  37   1        if(P33==1)
+  38   1        {
+  39   2          TR1 = 1;  
+  40   2        }//P00端口LED处于亮/灭状态
+  41   1        else
+  42   1        {
+  43   2          TR1 = 0;
+  44   2          buf=(unsigned int)TH1<<8|TL1;  //读取定时器计数
+  45   2          TH1   =0x00; 
+  46   2          TL1   =0x00;
+  47   2        
+  48   2          distance=(float)buf/200;//数据转换为距离，定时器计一次时间为12/11.0592（晶振）us，距离=时间(us)/10
+  49   2      
+  50   2        }
+  51   1        P6=~P6;
+  52   1        if(distance<100)
+  53   1        actual_dis=(23-(int)distance);
+  54   1      }
+C51 COMPILER V9.00   INTERRUPT                                                             11/21/2017 19:14:30 PAGE 2   
+
+  55          
+  56          void int_timer0() interrupt 1
+  57          {
+  58   1        pid.Ctime++;    
+  59   1        flag++;
+  60   1        System_refresh.set_Distance_fresh++;
+  61   1        System_refresh.action1_fresh++;
+  62   1        System_refresh.action2_fresh++;
+  63   1        System_refresh.action3_fresh++;
+  64   1      }
+  65          
+  66          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    169    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

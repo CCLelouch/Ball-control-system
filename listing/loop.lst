@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   LOOP                                                                  11/04/2017 15:29:49 PAGE 1   
+C51 COMPILER V9.00   LOOP                                                                  11/21/2017 19:14:29 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE LOOP
@@ -9,46 +9,63 @@ COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\loo
 line level    source
 
    1          /********************************************************************************
-   2          ** 文件名：
+   2          ** 文件名：小球控制系统
    3          ** 功能：
-   4          ** 说明：
+   4          ** 说明：激光接口P33
    5          ** 修改日期：2017-00-00
    6          ** 作者：c.c. 
    7          *********************************************************************************/
    8          #include"head.h"
    9          #include"lcd12864.h"
   10          #include"Delay.H"
-  11          #include"system.h"  
-  12          #include "buzzer.h"
-  13          
-  14          void STC15W_IOinit(void)
-  15          {
-  16   1        P0M1 = 0; P0M0 = 0; 
-  17   1        P1M1 = 0; P1M0 = 0; 
-  18   1        P2M1 = 0; P2M0 = 0;
-  19   1        P3M1 = 0; P3M0 = 0;      
-  20   1        P4M1 = 0; P4M0 = 0; 
-  21   1        P5M1 = 0; P5M0 = 0; 
-  22   1        P6M1 = 0; P6M0 = 0; 
-  23   1        P7M1 = 0; P7M0 = 0; 
-  24   1      }
-  25          
-  26          void main()
-  27          { 
-  28   1        STC15W_IOinit();
-  29   1        LCD12864_init();
-  30   1        while(1)
-  31   1        {
-  32   2          System();   
-  33   2        } 
-  34   1      }
-  35          
-  36          
-  37          
+  11          #include"Uart2.H"
+  12          #include"system.h"  
+  13          #include"buzzer.h"
+  14          #include"PWM.H"
+  15          #include"pid.h"
+  16          #include"interrupt.h"
+  17          #include"timer.h"
+  18          
+  19                    
+  20          void STC15W_IOinit(void)
+  21          {
+  22   1        P0M1 = 0; P0M0 = 0; 
+  23   1        P1M1 = 0; P1M0 = 0; 
+  24   1        P2M1 = 0; P2M0 = 0;
+  25   1        P3M1 = 0; P3M0 = 0;      
+  26   1        P4M1 = 0; P4M0 = 0; 
+  27   1        P5M1 = 0; P5M0 = 0; 
+  28   1        P6M1 = 0; P6M0 = 0; 
+  29   1        P7M1 = 0; P7M0 = 0; 
+  30   1        P0 = 0XFF;  P1 = 0XFF;  P2 = 0XFF; 
+  31   1        P3 = 0XFF;  P4 = 0XFF;  P5 = 0XFF; 
+  32   1        P6 = 0XFF;  P7 = 0XFF;
+  33   1      }
+  34          
+  35          void main()
+  36          { 
+  37   1        STC15W_IOinit();
+  38   1        PWM_init();
+  39   1        LCD12864_init();
+  40   1        PID_init();//清空pid
+  41   1        timer0_init();
+  42   1        int_timer0_init();
+  43   1        timer1_init();
+  44   1        int_external0_init();
+  45   1        while(1)
+  46   1        {
+  47   2          System();   
+  48   2        } 
+  49   1      }
+  50          
+  51          
+  52          
 
+
+C51 COMPILER V9.00   LOOP                                                                  11/21/2017 19:14:29 PAGE 2   
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =     45    ----
+   CODE SIZE        =     87    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

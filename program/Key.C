@@ -88,7 +88,9 @@ uchar KEY16_Flag()
 
 /****************************************************************
 /*函数名：KEY4_scan()			
-/*功能：按一下只读取一个键值，
+/*功能：按一下只读取一个0键
++。0.
+值，
 /*说明：按键按下后，释放才返回键值。取值范围0~3
 /*修改日期：2017-11-04
 /*作者：c.c. 
@@ -97,41 +99,81 @@ uchar KEY4_scan()
 {
  	if(s1==0)	
 	{
-		Delay(90);
+		Delay(120);
 		if(s1==0)
 		{
 //			Buzzer(0);
-			return 1;
+			while(1)
+			{
+				if(s1==1)	
+				{
+					Delay(120);
+					if(s1==1)
+					{
+						return 1;
+					}
+				}
+			}
 		}			
 	}
 
 	if(s2==0)	
 	{
-		Delay(90);
+		Delay(120);
 		if(s2==0)
 		{
 //		 	Buzzer(0);
-			return 2;
+			while(1)
+			{
+				if(s2==1)	
+				{
+					Delay(120);
+					if(s2==1)
+					{
+						return 2;
+					}
+				}
+			}
 		}
 	}
 
 	if(s3==0)	
 	{
-		Delay(90);
+		Delay(120);
 		if(s3==0)
 		{
 //		 	Buzzer(0);
-			return 3;
+			while(1)
+			{
+				if(s3==1)	
+				{
+					Delay(120);
+					if(s3==1)
+					{
+						return 3;
+					}
+				}
+			}
 		}		
 	}
 
 	if(s4==0)	
 	{
-		Delay(90);
+		Delay(120);
 		if(s4==0)
 		{
 //			Buzzer(0);
-			return 4;
+			while(1)
+			{
+				if(s4==1)	
+				{
+					Delay(120);
+					if(s4==1)
+					{
+						return 4;
+					}
+				}
+			}
 		}	
 	}
 	return 0;                                                                                                                                                                                                                                                                                                         

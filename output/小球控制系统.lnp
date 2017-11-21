@@ -3,6 +3,10 @@
 "..\output\lcd12864.obj",
 "..\output\System.obj",
 "..\output\Key.obj",
-"..\output\buzzer.obj" 
+"..\output\buzzer.obj",
+"..\output\interrupt.obj",
+"..\output\pid.obj",
+"..\output\PWM.obj",
+"..\output\timer.obj" 
 TO "..\output\小球控制系统" 
 PRINT("..\listing\小球控制系统.m51") RAMSIZE(256) 

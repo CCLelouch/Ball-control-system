@@ -1,6 +1,6 @@
 #ifndef _TIMER_H
 #define _TIMER_H
-#include <STC15WXX.h>
+#include <STC15W.h>
 
 extern void timer0_init();
 extern void timer1_init();

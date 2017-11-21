@@ -7,14 +7,14 @@ void Buzzer(uchar mode)
 {
  	switch(mode)
 	{
-	 	case 0:buzzer=0;Delay(60);buzzer=1;break;		//短一
-		case 1:																			//短三
+	 	case 0:buzzer=0;Delay(60);buzzer=1;break;		
+		case 1:																			
 		{
 			buzzer=0;Delay(60);buzzer=1;Delay(60);
 			buzzer=0;Delay(60);buzzer=1;Delay(60);
 			buzzer=0;Delay(60);buzzer=1;		
 		}break;
-		case 2:																		 //长三
+		case 2:																		
 		{
 			buzzer=0;Delay(500);buzzer=1;Delay(200);
 			buzzer=0;Delay(500);buzzer=1;Delay(200);

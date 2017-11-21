@@ -371,6 +371,16 @@
               <FileType>1</FileType>
               <FilePath>..\program\Key.C</FilePath>
             </File>
+            <File>
+              <FileName>buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>GY53.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\GY53.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

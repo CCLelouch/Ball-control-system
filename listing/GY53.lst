@@ -1,0 +1,25 @@
+C51 COMPILER V9.00   GY53                                                                  11/18/2017 02:16:59 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE GY53
+OBJECT MODULE PLACED IN ..\output\GY53.obj
+COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\GY53.c BROWSE INCDIR(..\program) DEBUG OBJE
+                    -CTEXTEND PRINT(..\listing\GY53.lst) TABS(2) OBJECT(..\output\GY53.obj)
+
+line level    source
+
+   1          #include"GY53.h"
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

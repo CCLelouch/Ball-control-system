@@ -1,1 +1,0 @@
-"..\program\System.c" BROWSE INCDIR(..\program) DEBUG OBJECTEXTEND PRINT(..\listing\System.lst) TABS (2) OBJECT(..\output\System.obj)

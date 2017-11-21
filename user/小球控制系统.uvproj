@@ -376,6 +376,26 @@
               <FileType>1</FileType>
               <FilePath>..\program\buzzer.c</FilePath>
             </File>
+            <File>
+              <FileName>interrupt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\interrupt.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\PWM.C</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

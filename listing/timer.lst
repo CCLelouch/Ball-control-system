@@ -1,0 +1,123 @@
+C51 COMPILER V9.00   TIMER                                                                 11/21/2017 19:14:31 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE TIMER
+OBJECT MODULE PLACED IN ..\output\timer.obj
+COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\timer.c BROWSE INCDIR(..\program) DEBUG OBJ
+                    -ECTEXTEND PRINT(..\listing\timer.lst) TABS(2) OBJECT(..\output\timer.obj)
+
+line level    source
+
+   1          #include"timer.h"
+   2          
+   3          /***************T1************TMOD***************T0*********************
+   4          ****B7    B6    B5    B4    |B3   B2    B1    B0      ****
+   5          ****GATE  C/T-  M1    M2    |GATE C/T-  M1    M2    ****
+   6          ************************************************************************/
+   7          /*****************************AUXR**************************************
+   8          ****B7    B6    B5    B4    |B3   B2    B1    B0      ****
+   9          ****T0*12 T1*12 ()    T2R   |T2_C/T T2*12 ()    S1ST2 ****
+  10          ************************************************************************/
+  11          void timer0_init()
+  12          { 
+  13   1        TMOD &= 0xF0;//清空
+  14   1        AUXR |= 0x80;//12分频   
+  15   1        TL0 = (65535-40000)/256;//每1ms进入一次中断     
+  16   1        TH0 = (65535-40000)%256;        
+  17   1        TR0 = 1;//定时器运行
+  18   1      
+  19   1      //  TL0 = 0xA0;   //设置定时初值
+  20   1      //  TH0 = 0xF6;   //设置定时初值
+  21   1         
+  22   1      }
+  23          
+  24          void timer1_init()
+  25          { 
+  26   1        AUXR |= 0x40;   //定时器时钟1T模式
+  27   1        TMOD &= 0x0F;   //设置定时器模式
+  28   1        TL1 = 0x00;   //设置定时初值
+  29   1        TH1 = 0x00;   //设置定时初值
+  30   1        TF1 = 0;    //清除TF1标志
+  31   1        TR1 = 0;       
+  32   1      }
+  33          /*
+  34          void timer2_init()
+  35          {
+  36            T2L = (65535-9256)/256;     
+  37            T2H = (65535-9256)%256;
+  38            AUXR &= 0X10;   
+  39          }
+  40          /*************************T4T3M/T3T4M***********************************
+  41          ****B7    B6    B5    B4    |B3   B2    B1    B0      ****
+  42          ****T4R   T4_C/T  T4*12 T4CLKO  |T4R  T3_C/T  T3*12 T3CLKO  ****
+  43          ************************************************************************
+  44          void timer3_init()
+  45          { 
+  46            TMOD &= 0xF0;   
+  47            T3L = (65535-9256)/256;     
+  48            T3H = (65535-9256)%256;       
+  49            T4T3M |= 0X08;     
+  50          }
+  51          
+  52          void timer4_init()
+  53          { 
+  54            TMOD &= 0xF0;   
+C51 COMPILER V9.00   TIMER                                                                 11/21/2017 19:14:31 PAGE 2   
+
+  55            T4L = (65535-9256)/256;       
+  56            T4H = (65535-9256)%256;       
+  57            T4T3M |= 0X80;     
+  58          }
+  59          
+  60          /*************************************************************************
+  61          ****              INTERRUP                ****
+  62          **************************************************************************/
+  63          
+  64          void int_timer0_init()
+  65          {
+  66   1        ET0 = 1;
+  67   1        EA = 1;
+  68   1      }
+  69          /*
+  70          void int_timer1_init()
+  71          {
+  72            ET1 = 1;
+  73            EA = 0;
+  74          }
+  75          /********************************IE2************************************
+  76          ****B7    B6    B5    B4    |B3   B2    B1    B0      ****
+  77          ****-   ET4   ET3   ES4   |ES3  ET2   ESPI  ES2   ****
+  78          ************************************************************************
+  79          void int_timer2_init()
+  80          {
+  81            IE2 |= 0X04;
+  82            EA = 1;
+  83          }
+  84          
+  85          void int_timer3_init()
+  86          {
+  87            IE2 |= 0X20;
+  88            EA = 0;
+  89          }
+  90          
+  91          void int_timer4_init()
+  92          {
+  93            IE2 |= 0X40;
+  94            EA = 0;
+  95          }
+  96          
+  97          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     36    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

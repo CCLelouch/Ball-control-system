@@ -1,0 +1,86 @@
+C51 COMPILER V9.00   PWM                                                                   11/21/2017 19:14:31 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE PWM
+OBJECT MODULE PLACED IN ..\output\PWM.obj
+COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\PWM.C BROWSE INCDIR(..\program) DEBUG OBJEC
+                    -TEXTEND PRINT(..\listing\PWM.lst) TABS(2) OBJECT(..\output\PWM.obj)
+
+line level    source
+
+   1          #include "PWM.H"
+   2          #include "PID.H"
+   3          #include"system.h"
+   4          
+   5          /********************************************************************************
+   6          ** 函数名：void PWM_init()
+   7          ** 功能： 
+   8          ** 说明：  CYCLE 1-32767
+   9          ** 修改日期：2017-11-12
+  10          ** 作者：c.c. 
+  11          *********************************************************************************/
+  12          void PWM_init()
+  13          {
+  14   1        P_SW2  |= EAXSFR;//访问拓展寄存器使能
+  15   1        PWMCFG &= 0X00;//全部初始状态为0，不触发ADC转换
+  16   1        PWMIF &= 0x00;//中断清空
+  17   1      
+  18   1        PWMCKS |= 0;//PWM时钟为系统时钟/（11+1）
+  19   1      
+  20   1      //  PWM2CR |= EPWM2I;//默认使用引脚P37,打开中断
+  21   1      //  PWM2CR |= EC2T2SI;//,T2翻转中断
+  22   1      
+  23   1        PWMC = CYCLE;
+  24   1        PWM2T1 = 0;
+  25   1        PWM2T2 = 50;
+  26   1      
+  27   1        PWMCR &= 0x00;//
+  28   1      //  PWMCR |= ECBI;//打开中断
+  29   1        EA = 1;
+  30   1        PWMCR |= ENC20;//PWM2输出使能
+  31   1        PWMCR |= ENPWM;//开始计数
+  32   1        
+  33   1        P_SW2 |= ~EAXSFR;//关闭拓展寄存器使能
+  34   1      }
+  35          
+  36          /********************************************************************************
+  37          ** 函数名：void PWM2_set()
+  38          ** 功能： 
+  39          ** 说明：
+  40          ** 修改日期：2017-11-12
+  41          ** 作者：c.c. 
+  42          *********************************************************************************/
+  43          void PWM2_set(uint duty)       //bug:加上中断出现雪花屏，pwm正常
+  44          {
+  45   1        P_SW2  |= EAXSFR;//访问拓展寄存器使能
+  46   1      //  PWM2T1 = 0;
+  47   1        PWM2T2 = duty;
+  48   1        P_SW2  |= ~EAXSFR;//关闭拓展寄存器使能
+  49   1      }
+  50          
+  51          void PWM2_Interrupt() interrupt 22
+  52          {
+  53   1        if(PWMIF&&C2IF)
+  54   1        {
+C51 COMPILER V9.00   PWM                                                                   11/21/2017 19:14:31 PAGE 2   
+
+  55   2          PWMIF &= ~C2IF;//中断清零，和C2IF
+  56   2      
+  57   2          PWM2_set(500);
+  58   2        }
+  59   1        P2 = ~P2;
+  60   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    112    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
