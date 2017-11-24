@@ -50,7 +50,7 @@ void INT1_Int (void) interrupt 2		 //INT0/P3.3/**/4
 	}
 	P6=~P6;
 	if(distance<100)
-	actual_dis=(23-(int)distance);
+	actual_dis=((int)distance*1.09);
 }
 
 void int_timer0() interrupt 1

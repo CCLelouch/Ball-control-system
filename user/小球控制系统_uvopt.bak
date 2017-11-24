@@ -122,6 +122,36 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
+          <LineNumber>40</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>pid.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>55</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>interrupt.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
           <LineNumber>101</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
@@ -135,7 +165,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>1</Number>
+          <Number>3</Number>
           <Type>0</Type>
           <LineNumber>301</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -150,7 +180,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>2</Number>
+          <Number>4</Number>
           <Type>0</Type>
           <LineNumber>64</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -165,7 +195,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>3</Number>
+          <Number>5</Number>
           <Type>0</Type>
           <LineNumber>102</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -180,7 +210,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>4</Number>
+          <Number>6</Number>
           <Type>0</Type>
           <LineNumber>7</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -237,10 +267,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>36</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>20</TopLine>
-      <CurrentLine>42</CurrentLine>
+      <TopLine>19</TopLine>
+      <CurrentLine>45</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\loop.c</PathWithFileName>
       <FilenameWithoutPath>loop.c</FilenameWithoutPath>
@@ -265,10 +295,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>34</ColumnNumber>
+      <ColumnNumber>39</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>88</TopLine>
-      <CurrentLine>88</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\lcd12864.c</PathWithFileName>
       <FilenameWithoutPath>lcd12864.c</FilenameWithoutPath>
@@ -277,12 +307,12 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>27</ColumnNumber>
+      <ColumnNumber>42</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>62</TopLine>
-      <CurrentLine>78</CurrentLine>
+      <TopLine>70</TopLine>
+      <CurrentLine>72</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\System.c</PathWithFileName>
       <FilenameWithoutPath>System.c</FilenameWithoutPath>
@@ -293,10 +323,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>25</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>17</CurrentLine>
+      <TopLine>159</TopLine>
+      <CurrentLine>159</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\Key.C</PathWithFileName>
       <FilenameWithoutPath>Key.C</FilenameWithoutPath>
@@ -307,10 +337,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>27</ColumnNumber>
+      <ColumnNumber>18</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>17</CurrentLine>
+      <CurrentLine>24</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\buzzer.c</PathWithFileName>
       <FilenameWithoutPath>buzzer.c</FilenameWithoutPath>
@@ -321,10 +351,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>129</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>35</TopLine>
-      <CurrentLine>57</CurrentLine>
+      <TopLine>34</TopLine>
+      <CurrentLine>37</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\interrupt.c</PathWithFileName>
       <FilenameWithoutPath>interrupt.c</FilenameWithoutPath>
@@ -335,10 +365,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>67</ColumnNumber>
+      <ColumnNumber>129</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>27</TopLine>
-      <CurrentLine>33</CurrentLine>
+      <TopLine>46</TopLine>
+      <CurrentLine>64</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\pid.c</PathWithFileName>
       <FilenameWithoutPath>pid.c</FilenameWithoutPath>
@@ -349,10 +379,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>25</CurrentLine>
+      <TopLine>28</TopLine>
+      <CurrentLine>57</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\PWM.C</PathWithFileName>
       <FilenameWithoutPath>PWM.C</FilenameWithoutPath>
@@ -365,11 +395,25 @@
       <Focus>0</Focus>
       <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>10</TopLine>
-      <CurrentLine>19</CurrentLine>
+      <TopLine>64</TopLine>
+      <CurrentLine>64</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\program\timer.c</PathWithFileName>
       <FilenameWithoutPath>timer.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>0</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>1</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\program\ADC.c</PathWithFileName>
+      <FilenameWithoutPath>ADC.c</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -400,7 +444,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\KEY.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\KEY.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>12</CurrentLine>
     <Constant>0</Constant>
@@ -426,7 +470,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\BUZZER.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\BUZZER.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>7</CurrentLine>
     <Constant>0</Constant>
@@ -452,7 +496,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\DELAY.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\DELAY.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>4</CurrentLine>
     <Constant>0</Constant>
@@ -478,7 +522,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\HEAD.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\HEAD.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>10</CurrentLine>
     <Constant>0</Constant>
@@ -504,7 +548,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\LCD12864.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\LCD12864.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>14</CurrentLine>
     <Constant>0</Constant>
@@ -530,9 +574,9 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\PID.H</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>27</CurrentLine>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\PID.H</PathWithFilename>
+    <TopLine>6</TopLine>
+    <CurrentLine>39</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -556,9 +600,9 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\PWM.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\PWM.H</PathWithFilename>
     <TopLine>15</TopLine>
-    <CurrentLine>43</CurrentLine>
+    <CurrentLine>44</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -582,7 +626,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\SYSTEM.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\SYSTEM.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>28</CurrentLine>
     <Constant>0</Constant>
@@ -608,9 +652,35 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system19\PROGRAM\INTERRUPT.H</PathWithFilename>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\INTERRUPT.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>1</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>G:\单片机\15w89c单片机\15W程序\电子设计大赛\Ball-control-system21\PROGRAM\ADC.H</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>21</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1974,8 +2044,38 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>7</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>..\program\System.c</Name>
+          <ColumnNumber>42</ColumnNumber>
+          <TopLine>70</TopLine>
+          <CurrentLine>72</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\program\loop.c</Name>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>19</TopLine>
+          <CurrentLine>45</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\PROGRAM\ADC.H</Name>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>21</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\program\pid.c</Name>
+          <ColumnNumber>129</ColumnNumber>
+          <TopLine>46</TopLine>
+          <CurrentLine>64</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\program\Delay.C</Name>
+          <ColumnNumber>10</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>9</CurrentLine>
+        </Doc>
         <Doc>
           <Name>..\PROGRAM\INTERRUPT.H</Name>
           <ColumnNumber>0</ColumnNumber>
@@ -1990,75 +2090,51 @@
         </Doc>
         <Doc>
           <Name>..\program\Key.C</Name>
-          <ColumnNumber>12</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>17</CurrentLine>
+          <ColumnNumber>25</ColumnNumber>
+          <TopLine>159</TopLine>
+          <CurrentLine>159</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\PROGRAM\PWM.H</Name>
-          <ColumnNumber>7</ColumnNumber>
+          <ColumnNumber>11</ColumnNumber>
           <TopLine>15</TopLine>
-          <CurrentLine>43</CurrentLine>
+          <CurrentLine>44</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\PROGRAM\PID.H</Name>
-          <ColumnNumber>22</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>27</CurrentLine>
+          <ColumnNumber>4</ColumnNumber>
+          <TopLine>6</TopLine>
+          <CurrentLine>39</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\program\lcd12864.c</Name>
-          <ColumnNumber>34</ColumnNumber>
-          <TopLine>88</TopLine>
-          <CurrentLine>88</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\program\System.c</Name>
-          <ColumnNumber>27</ColumnNumber>
-          <TopLine>62</TopLine>
-          <CurrentLine>78</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\program\loop.c</Name>
-          <ColumnNumber>36</ColumnNumber>
-          <TopLine>20</TopLine>
-          <CurrentLine>42</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\program\pid.c</Name>
-          <ColumnNumber>67</ColumnNumber>
-          <TopLine>27</TopLine>
-          <CurrentLine>33</CurrentLine>
+          <ColumnNumber>39</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\program\interrupt.c</Name>
-          <ColumnNumber>12</ColumnNumber>
-          <TopLine>35</TopLine>
-          <CurrentLine>57</CurrentLine>
+          <ColumnNumber>129</ColumnNumber>
+          <TopLine>34</TopLine>
+          <CurrentLine>37</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\program\PWM.C</Name>
-          <ColumnNumber>13</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>25</CurrentLine>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>28</TopLine>
+          <CurrentLine>57</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\program\timer.c</Name>
           <ColumnNumber>16</ColumnNumber>
-          <TopLine>10</TopLine>
-          <CurrentLine>19</CurrentLine>
+          <TopLine>64</TopLine>
+          <CurrentLine>64</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\program\buzzer.c</Name>
-          <ColumnNumber>27</ColumnNumber>
+          <ColumnNumber>18</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>17</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\program\Delay.C</Name>
-          <ColumnNumber>10</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>9</CurrentLine>
+          <CurrentLine>24</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\PROGRAM\LCD12864.H</Name>

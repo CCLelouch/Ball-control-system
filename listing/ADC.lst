@@ -1,0 +1,97 @@
+C51 COMPILER V9.00   ADC                                                                   11/23/2017 21:54:39 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE ADC
+OBJECT MODULE PLACED IN ..\output\ADC.obj
+COMPILER INVOKED BY: D:\keil\keillc51\keillc51set\C51\BIN\C51.EXE ..\program\ADC.c BROWSE INCDIR(..\program) DEBUG OBJEC
+                    -TEXTEND PRINT(..\listing\ADC.lst) TABS(2) OBJECT(..\output\ADC.obj)
+
+line level    source
+
+   1          /********************************************************************************
+   2          ** 文件名：ADC.C    //@11.0592MHz
+   3          ** 功能：AD转换
+   4          ** 说明：P1为模拟输入口，CHX为读取端口，每次只能读取一个。
+   5          ** 修改日期：2017-06-29
+   6          ** 作者：c.c. 
+   7          *********************************************************************************/
+   8          #include"ADC.H"
+   9          //uchar ADC_Write_byte,ADC_Read_byte;
+  10          
+  11          
+  12          /****************************************************************
+  13          /*函数：void ADC_init(uchar CHX)    
+  14          /*功能：初始化AD配置寄存器
+  15          /*说明：
+  16          /*参数：CHX需要AD的P1口具体通道，取值范围0x00-0xff
+  17          /*修改日期：2017-07-11
+  18          /*作者：C.C.
+  19          /***************************************************************/
+  20          void ADC_init(uchar CHX)
+  21          {
+  22   1        ADC_RES  = 0;
+  23   1      //  ADC_RESL = 0;
+  24   1        P1ASF &=0X00;
+  25   1        P1ASF |= CHX;//选择通道切断内部反相器
+  26   1      
+  27   1      //  CLK_DIV   |=0X20;
+  28   1      }
+  29          
+  30          
+  31          /****************************************************************
+  32          /*函数：uchar ADC_Read(uchar Write_byte)    
+  33          /*功能：AD
+  34          /*说明：
+  35          /*参数：Write_byte 取值0x00-0x07，
+  36          /*修改日期：2017-07-11
+  37          /*作者：C.C.
+  38          /***************************************************************/
+  39          uchar ADC_Read(uchar Write_byte)
+  40          {
+  41   1        
+  42   1        ADC_RES  = 0;       //配置寄存器储存地址
+  43   1      //  ADC_RESL = 0;
+  44   1        ADC_CONTR &=0X00;
+  45   1        ADC_CONTR = 0XE8|Write_byte;//打开电源，速度全速，FLAG清零,开始转换，或(|)通道，对应某个通道开始转换 
+  46   1        while(1)
+  47   1        {
+  48   2          if(ADC_CONTR & 0X10)  //等待标志位FLAG 置一
+  49   2          {
+  50   3            ADC_CONTR = 0;     
+  51   3            return ADC_RES;   //返回存储地址的八位数据
+  52   3          } 
+  53   2        } 
+  54   1      }
+C51 COMPILER V9.00   ADC                                                                   11/23/2017 21:54:39 PAGE 2   
+
+  55          /*******************************P1ASF***********************************
+  56          ****B7    B6    B5    B4    |B3      B2    B1    B0     ****
+  57          ****P17ASF  P16ASF  P15ASF  P14ASF  |P13ASF  P12ASF  P11ASF  P10ASF ****
+  58          ************************************************************************/
+  59          
+  60          
+  61          /*******************************ADC_CONTR*******************************
+  62          ****B7    B6    B5    B4    |B3      B2    B1    B0     ****
+  63          ****POWER SPEED1  SPEED2  FLAG  |START   CHS2  CHS1  CHS0 ****
+  64          ************************************************************************/
+  65          
+  66          
+  67          /*******************************SCLK_DIV********************************
+  68          ****B7    B6    B5    B4    |B3      B2    B1    B0     ****
+  69          ****...   ...   ADRJ  ...   |...   ...   ...   ...  ****
+  70          **************************结果存放****ADC_RES ADC_RESL******************
+  71          ************************************************************************/
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     30    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -6,6 +6,7 @@
 #include"pid.h"
 #include"pwm.h"
 
+
 int flag=0,diatance_buf;
 /**************************显示页面*****************************/
 uchar xdata Display[5][4][17]={
@@ -36,7 +37,7 @@ Refresh System_refresh ={20,0,5,10,15};//系统各刷新时间结构体初始化T = 20ms
 /*函数名：void Set_Distance()			
 /*功能：	实现距离设定和控制
 /*说明：
-/*修改日期：2017-11-12
+/*修改日期：2017-11-23
 /*作者：c.c. 
 /***************************************************************/
 void Set_Distance()
@@ -71,32 +72,31 @@ void Set_Distance()
 	 	case 4:
 		{
 															//在此循环中添加控制函数
-			actual_dis = 15;
-/**/		PID_setpara(1,0,0);//参数：比例系数，积分系数，微分系数
+//			actual_dis = 15;
+/**/		PID_setpara(1,1,1);//参数：比例系数，积分系数，微分系数
 			while(1)
 			{
-				if(actual_dis != diatance_buf)//距离改变时，改变PWM
+				PID_Calculate(set_buff,actual_dis);
+//				PWM2_set(PID_Calculate(set_buff,actual_dis));
+				PWM2_set(pid.OUT);
+				if(actual_dis != diatance_buf)//距离改变时，改变显示
 				{
-//					PID_Calculate(actual_dis,set_buff,0);
-					PWM2_set(PID_Calculate(actual_dis,set_buff,0));
+					if(actual_dis>0)
+					{	
+						Display[1][2][9]='+';	//0                                                                                                                                                                                                                                                                                
+						Display[1][2][11]='0'+actual_dis%10;	//0
+						Display[1][2][10]='0'+actual_dis/10;	//10
+					}
+					else
+					{
+						dis = -actual_dis;
+						Display[1][2][9]='-';	//0
+						Display[1][2][11]='0'+dis%10;	//0
+						Display[1][2][10]='0'+dis/10;	//10
+					}
+					LCD12864_Display(3,&Display[1][2][0]);
 					diatance_buf=actual_dis;//同步 
 				}
-
-				if(actual_dis>0)
-				{	
-					Display[1][2][9]='+';	//0                                                                                                                                                                                                                                                                                
-					Display[1][2][11]='0'+actual_dis%10;	//0
-					Display[1][2][10]='0'+actual_dis/10;	//10
-				}
-				else
-				{
-					dis = -actual_dis;
-					Display[1][2][9]='-';	//0
-					Display[1][2][11]='0'+dis%10;	//0
-					Display[1][2][10]='0'+dis/10;	//10
-				}
-
-				LCD12864_Display(3,&Display[1][2][0]);
 				if(KEY4_scan()==4)
 					break;
 			}
@@ -295,7 +295,7 @@ void System()
 
 				System_refresh.action3_fresh=0;
 //				EA = 1;
-				P01=~P01;
+//				P01=~P01;
 			}
 			Action3();
 		}break;

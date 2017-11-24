@@ -102,7 +102,7 @@ uchar KEY4_scan()
 		Delay(120);
 		if(s1==0)
 		{
-//			Buzzer(0);
+			Buzzer(0);
 			while(1)
 			{
 				if(s1==1)	
@@ -122,7 +122,7 @@ uchar KEY4_scan()
 		Delay(120);
 		if(s2==0)
 		{
-//		 	Buzzer(0);
+		 	Buzzer(0);
 			while(1)
 			{
 				if(s2==1)	
@@ -142,7 +142,7 @@ uchar KEY4_scan()
 		Delay(120);
 		if(s3==0)
 		{
-//		 	Buzzer(0);
+		 	Buzzer(0);
 			while(1)
 			{
 				if(s3==1)	
@@ -162,7 +162,7 @@ uchar KEY4_scan()
 		Delay(120);
 		if(s4==0)
 		{
-//			Buzzer(0);
+			Buzzer(0);
 			while(1)
 			{
 				if(s4==1)	

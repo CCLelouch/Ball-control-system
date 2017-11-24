@@ -15,7 +15,6 @@
 #include"pid.h"
 #include"interrupt.h"
 #include"timer.h"
-
 					
 void STC15W_IOinit(void)
 {

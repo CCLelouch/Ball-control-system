@@ -377,9 +377,29 @@
               <FilePath>..\program\buzzer.c</FilePath>
             </File>
             <File>
-              <FileName>GY53.c</FileName>
+              <FileName>interrupt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\program\GY53.c</FilePath>
+              <FilePath>..\program\interrupt.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\PWM.C</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\ADC.c</FilePath>
             </File>
           </Files>
         </Group>

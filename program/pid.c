@@ -22,7 +22,7 @@ void PID_init()//清空pid
 	pid.Iout = 0;				
 	pid.Dout = 0;
 
-	pid.OUT   = 1000;
+	pid.OUT   = 50;
 	pid.Ctime = 0;
 	pid.pwm   = CYCLE;
 	
@@ -36,30 +36,37 @@ void PID_setpara(float kp,float ki,float kd)
 	pid.Kd = kd;
 }
 
-uint PID_Calculate(unsigned int sv,float pv,unsigned char gain)
+uint PID_Calculate(unsigned int sv,float pv)
 {
 	unsigned int out;
-	if(gain)
-		return pid.OUT; 
-	if(pid.Ctime<pid.T)
-		return 0;
+
+//	if(pid.Ctime<pid.T)
+//		{
+//			return 0;
+//		}
+
+	P22 = 0;
+	P22 = 1;
 
 	pid.Sv = sv;
 	pid.Pv = pv;
 
 	pid.Ek = pid.Sv-pid.Pv;//当前误差值
-/*P*/
-	pid.Pout = (uint)(pid.Kp*(pid.Ek-pid.Ek_1));//比例输出
-/*I*/
-	pid.Iout = (uint)(pid.Ki*pid.Ek);//积分输出
-/*D*/
-	pid.Dout = (uint)(pid.Kd*(pid.Ek-pid.Ek_1<<1+pid.Ek_2));//微分输出
 
-	out=pid.Pout + pid.Iout + pid.Dout;
+///*P*/
+//	pid.Pout = pid.Kp*(pid.Ek-pid.Ek_1);//比例输出
+///*I*/
+//	pid.Iout = pid.Ki*pid.Ek;//积分输出
+///*D*/
+//	pid.Dout = pid.Kd*(pid.Ek-pid.Ek_1<<1+pid.Ek_2);//微分输出
+//
+//	out=(uint)(pid.Pout + pid.Iout + pid.Dout);
+
+ 	pid.Pout = pid.Kp*pid.Ek;
 
 	if(out>pid.pwm)
 	{
-		pid.OUT = pid.pwm-10;
+		pid.OUT = pid.pwm-1;
 	}
 	else if(out<=0)
 	{

@@ -5,8 +5,8 @@
 
 typedef struct
 {
- 	unsigned char Sv;//设定值
-	float Pv;//当前值
+ 	char Sv;//设定值
+	char Pv;//当前值
 
 	float Kp;//比例系数
 	float Ki;//积分系数
@@ -16,9 +16,9 @@ typedef struct
 	unsigned int Ek_1;//上次偏差值
 	unsigned int Ek_2;
 
-	unsigned int Pout;
-	unsigned int Iout;
-	unsigned int Dout;
+	float Pout;
+	float Iout;
+	float Dout;
 	
 	unsigned int OUT;
 	unsigned int pwm;
@@ -36,7 +36,7 @@ extern uint;
 /*PID外接函数*/
 void PID_init();//清空pid
 void PID_setpara(float kp,float ki,float kd);//参数：比例系数，积分系数，微分系数
-uint PID_Calculate(unsigned int sv,float pv,unsigned char gain);//参数：设定值，当前值，输入1获取PWM但不运算（缺省或0运算并获取PWM）
+uint PID_Calculate(unsigned int sv,float pv);//参数：设定值，当前值，输入1获取PWM但不运算（缺省或0运算并获取PWM）
 
 #endif
 

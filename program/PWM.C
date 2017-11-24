@@ -22,7 +22,7 @@ void PWM_init()
 
 	PWMC = CYCLE;
 	PWM2T1 = 0;
-	PWM2T2 = 50;
+	PWM2T2 = 5;
 
 	PWMCR &= 0x00;//
 //	PWMCR |= ECBI;//´ò¿ªÖÐ¶Ï
